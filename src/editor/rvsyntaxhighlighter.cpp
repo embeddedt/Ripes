@@ -11,7 +11,7 @@ RVSyntaxHighlighter::RVSyntaxHighlighter(
   HighlightingRule rule;
 
   // General registers
-  registerFormat.setForeground(QColor{0x80, 0x00, 0x00});
+  registerFormat.setForeground(QColor{0xD0, 0x00, 0x00});
   rule.pattern = QRegularExpression("\\b[(a|s|t|x)][0-9]{1,2}");
   rule.format = registerFormat;
   m_highlightingRules.append(rule);
@@ -57,7 +57,7 @@ RVSyntaxHighlighter::RVSyntaxHighlighter(
   m_highlightingRules.append(rule);
 
   // Strings
-  stringFormat.setForeground(QColor{0x80, 0x00, 0x00});
+  stringFormat.setForeground(QColor{0xD0, 0x00, 0x00});
   rule.pattern = QRegularExpression(R"("(?:[^"]|\.)*")");
   rule.format = stringFormat;
   m_highlightingRules.append(rule);
